@@ -1,6 +1,3 @@
--- init.lua
-
--- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -24,7 +21,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Proper plugin import order: core, extras, then your own
 require("lazy").setup({
   spec = {
     -- Core LazyVim
@@ -53,7 +49,6 @@ require("lazy").setup({
   },
 })
 
--- Optional: additional plugin config
 require("neotest").setup({
   adapters = {
     require("neotest-python")({
@@ -65,3 +60,4 @@ require("neotest").setup({
 require("keymaps.neotest")
 
 vim.opt.termguicolors = true
+
