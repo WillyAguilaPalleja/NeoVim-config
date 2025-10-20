@@ -23,7 +23,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    -- Core LazyVim
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     { import = "plugins" },
   },
@@ -61,3 +60,4 @@ require("keymaps.neotest")
 
 vim.opt.termguicolors = true
 
+vim.opt.clipboard = "unnamedplus"
