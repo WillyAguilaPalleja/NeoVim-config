@@ -12,6 +12,11 @@ return {
         operators = false,
         folds = false,
       },
+      overrides = {
+        ["@keyword.coroutine"] = { link = "@keyword.function" },
+        ["@keyword.import"] = { link = "@keyword" },
+        ["@variable.parameter"] = { link = "@constant" },
+      },
     })
     vim.cmd.colorscheme("gruvbox")
   end,

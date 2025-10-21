@@ -3,7 +3,7 @@ return {
   opts = function()
     return {
       formatters_by_ft = {
-        python = { "black_custom" },
+        python = { "isort", "black" },
         javascript = { "prettier" },
         typescript = { "prettier" },
         javascriptreact = { "prettier" },
@@ -15,11 +15,16 @@ return {
         markdown = { "prettier" },
       },
       formatters = {
-        black_custom = {
-          command = "black",
-          args = { "--line-length", "100", "--quiet", "-" },
-          stdin = true,
+        black = {
+          prepend_args = { "--line-length", "100" },
         },
+        isort = {
+          prepend_args = { "-l", "90", "--profile", "black" },
+        },
+      },
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_format = "fallback",
       },
     }
   end,

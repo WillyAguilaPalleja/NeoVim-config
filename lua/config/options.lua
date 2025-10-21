@@ -18,5 +18,11 @@ opt.wrap = false
 opt.scrolloff = 8
 opt.sidescrolloff = 8
 
+opt.splitbelow = true
+opt.splitright = true
+
+opt.signcolumn = "yes"
+opt.updatetime = 200
+
 opt.spelllang = "en"
 opt.spell = false
