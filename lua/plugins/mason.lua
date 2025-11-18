@@ -2,7 +2,7 @@ return {
   "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
-      "pyright",
+      "basedpyright",
       "typescript-language-server",
       "html-lsp",
       "css-lsp",

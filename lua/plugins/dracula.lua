@@ -28,7 +28,7 @@ return {
           -- Control & structural keywords
           ["@keyword"] = { fg = "#cc7832", italic = false },
           ["@keyword.control"] = { fg = "#cc7832", italic = false },
-          ["@keyword.function"] = { fg = "#cc7832", italic = false }, -- ensures `def` is orange
+          ["@keyword.function"] = { fg = "#cc7832", italic = false },
           ["@keyword.coroutine"] = { fg = "#cc7832", italic = false },
 
           -- Function and method definitions
@@ -40,7 +40,7 @@ return {
           ["@method.call"] = { fg = "#f8f8f2", italic = false },
 
           -- Arguments
-          ["@variable.parameter"] = { fg = "#ff6b68", italic = false }, -- red in calls
+          ["@variable.parameter"] = { fg = "#ff6b68", italic = false }, 
           ["@lsp.type.parameter"] = { fg = "#ff6b68", italic = false },
           ["@lsp.typemod.parameter"] = { fg = "#ff6b68", italic = false },
 
@@ -53,7 +53,7 @@ return {
           ["@decorator"] = { fg = "#ffc66d", italic = false },
           ["@attribute"] = { fg = "#ffc66d", italic = false },
           ["@punctuation.special"] = { fg = "#f8f8f2", italic = false },
-          ["@punctuation.delimiter"] = { fg = "#f8f8f2", italic = false }, -- fixes arrow `->`
+          ["@punctuation.delimiter"] = { fg = "#f8f8f2", italic = false }, 
 
           -- Modules / import / namespaces
           ["@namespace"] = { fg = "#a9b7c6", italic = false },
@@ -84,16 +84,16 @@ return {
         },
       })
 
-      -- Final enforcement of key groups
+      
       local manual_hl = {
         ["@keyword"] = "#cc7832",
         ["@keyword.control"] = "#cc7832",
-        ["@keyword.function"] = "#cc7832", -- ensures `def` remains orange
+        ["@keyword.function"] = "#cc7832", 
         ["@function"] = "#f8f8f2",
         ["@function.call"] = "#f8f8f2",
         ["@method"] = "#f8f8f2",
         ["@function.decorator"] = "#ffc66d",
-        ["@variable.parameter"] = "#ff6b68", -- call-time param
+        ["@variable.parameter"] = "#ff6b68", 
         ["@lsp.type.parameter"] = "#ff6b68",
         ["@type.builtin"] = "#6897bb",
         ["@punctuation.delimiter"] = "#f8f8f2",
