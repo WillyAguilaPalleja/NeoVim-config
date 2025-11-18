@@ -48,15 +48,6 @@ require("lazy").setup({
   },
 })
 
-require("neotest").setup({
-  adapters = {
-    require("neotest-python")({
-      dap = { justMyCode = false },
-    }),
-  },
-})
-
-require("keymaps.neotest")
 
 vim.opt.termguicolors = true
 

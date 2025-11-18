@@ -10,9 +10,6 @@ return {
         typescriptreact = { "prettier" },
         html = { "prettier" },
         css = { "prettier" },
-        json = { "prettier" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
       },
       formatters = {
         black = {
@@ -21,10 +18,6 @@ return {
         isort = {
           prepend_args = { "-l", "90", "--profile", "black" },
         },
-      },
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_format = "fallback",
       },
     }
   end,

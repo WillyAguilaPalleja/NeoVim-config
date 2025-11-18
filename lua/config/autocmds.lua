@@ -23,3 +23,22 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.softtabstop = 4
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  callback = function()
+    local env_file = vim.fn.getcwd() .. "/ENV/test.env"
+    if vim.fn.filereadable(env_file) == 1 then
+      for line in io.lines(env_file) do
+        if not line:match("^%s*#") and not line:match("^%s*$") then
+          local key, value = line:match("^([%w_]+)=(.*)$")
+          if key and value then
+            value = value:gsub("^['\"](.*)['\"]", "%1")
+            value = value:gsub("%s*#.*$", "")
+            vim.fn.setenv(key, vim.trim(value))
+          end
+        end
+      end
+    end
+  end,
+})
