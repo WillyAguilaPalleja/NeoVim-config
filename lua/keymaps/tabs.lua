@@ -1,0 +1,7 @@
+vim.keymap.set("n", "<leader><Tab>l", "<cmd>blast<cr>", { desc = "Last Buffer" })
+vim.keymap.set("n", "<leader><Tab>o", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close Other Buffers" })
+vim.keymap.set("n", "<leader><Tab>f", "<cmd>bfirst<cr>", { desc = "First Buffer" })
+vim.keymap.set("n", "<leader><Tab><Tab>", "<cmd>enew<cr>", { desc = "New Buffer" })
+vim.keymap.set("n", "<leader><Tab>]", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<leader><Tab>d", "<cmd>bd<cr>", { desc = "Close Buffer" })
+vim.keymap.set("n", "<leader><Tab>[", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
